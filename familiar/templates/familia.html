@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mi Familia</h1>
+    {% if lista_familiares %}
+        {% for familiar in lista_familiares %}
+                <li>Nombre: {{familiar.nombre}} {{familiar.apellido}}, Edad: {{familiar.edad}} - fecha de nacimiento {{familiar.DOB}}</li>
+        {% endfor %}
+    {% else %}
+        <p>No hay familiares listados</p>
+    {% endif %}
+</body>
+</html>
