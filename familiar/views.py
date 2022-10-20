@@ -15,7 +15,6 @@ def agregar_familiar(request, nombre, apellido, edad, fecha):
         DOB = datetime.strptime(fecha, '%d-%m-%Y').date()
         familiarguardar.DOB = DOB
         familiarguardar.save()
-        #raise TypeError("Only integers are allowed")
         return HttpResponse(
             f"""<p>Nombre: {familiarguardar.nombre} {familiarguardar.apellido} - agregado correctamente"""
         )
